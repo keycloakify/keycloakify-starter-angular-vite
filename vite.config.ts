@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     angular(),
     keycloakify({
-      accountThemeImplementation: 'none',
+      accountThemeImplementation: 'Multi-Page',
     }),
   ],
   test: {
