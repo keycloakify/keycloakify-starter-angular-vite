@@ -9251,10 +9251,10 @@ ohash@^2.0.10, ohash@^2.0.11, ohash@^2.0.5:
   resolved "https://registry.yarnpkg.com/ohash/-/ohash-2.0.11.tgz#60b11e8cff62ca9dee88d13747a5baa145f5900b"
   integrity sha512-RdR9FQrFwNBNXAr4GixM8YaRZRJ5PUWbKYbE5eOsrwAjJW0q2REGcf79oYPsLyskQCZG1PLN+S/K1V00joZAoQ==
 
-oidc-spa@^5.6.1:
-  version "5.6.1"
-  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-5.6.1.tgz#bd4953bad6671d10088f86540cbc8e2f6c85701f"
-  integrity sha512-ZC9AA+rnsy9xX76znf3qppbtUliedl1B2WLWSkD3xx2svOWdPlm7sy7yHzbU8pBsBas0HEcccJrJpeBD6MGdKw==
+oidc-spa@^5.6.2:
+  version "5.6.2"
+  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-5.6.2.tgz#8bcb6812cad869e17e3f863ddb5d0a756c001fa3"
+  integrity sha512-yx6iwCAU8OAvYxK6rzhvAKnD4xgZZljk/PWo4tDMgMyPvHyU1mGLWJVml6Z992yKTxduiWdvZFeRnn6GblS1vQ==
 
 on-finished@2.4.1, on-finished@^2.3.0, on-finished@^2.4.1:
   version "2.4.1"
