@@ -369,20 +369,13 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/platform-server@^19.1.0", "@angular/platform-server@^19.1.5":
+"@angular/platform-server@^19.1.0":
   version "19.1.5"
   resolved "https://registry.yarnpkg.com/@angular/platform-server/-/platform-server-19.1.5.tgz#60bf00c2c393fb368f306eb9a983ce24cfd40e32"
   integrity sha512-cG09kFDjHr6p1g7Szf6NfXtb7bM5Vb8XK8qsReACegeugZ+zYZUdDWhDNKYgAmqf0q3rUuJ2UQFx2H25m+W/hQ==
   dependencies:
     tslib "^2.3.0"
     xhr2 "^0.2.0"
-
-"@angular/ssr@^19.1.6":
-  version "19.1.6"
-  resolved "https://registry.yarnpkg.com/@angular/ssr/-/ssr-19.1.6.tgz#72dc74a18d895c3f04f3e726799454ef35924b95"
-  integrity sha512-2tfTKnNMITCi6Kd4q9wlWJE4lsqDdK8anvDPocUbRk1rprP2wLxW2NrYNC1QMfCmJjYxPRLgh9syA3cAWMr84g==
-  dependencies:
-    tslib "^2.3.0"
 
 "@asamuzakjp/css-color@^2.8.2":
   version "2.8.3"
