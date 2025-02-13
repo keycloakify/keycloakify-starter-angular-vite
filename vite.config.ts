@@ -29,6 +29,8 @@ export default defineConfig(({ mode }) => ({
           locales: ['en', 'pl'],
           cwd: import.meta.dirname,
           esbuild: {
+            packages: 'bundle',
+            external: ['@maizzle/framework'],
             plugins: [angularEsbuildPlugin(import.meta.dirname)],
           },
         });

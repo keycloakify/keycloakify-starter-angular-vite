@@ -1,8 +1,7 @@
+import { Config } from 'tailwindcss';
+// @ts-expect-error: no d.ts
 import presetEmail from 'tailwindcss-preset-email';
 
-/**
- * @type {import('tailwindcss').Config}
- */
 export default {
   content: ['./**/*.{html,ts}'],
   presets: [presetEmail],
@@ -23,4 +22,4 @@ export default {
       },
     },
   },
-};
+} satisfies Config;

@@ -1,13 +1,15 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, ViewEncapsulation } from '@angular/core';
 import { ContainerComponent, ImgComponent, render, TextComponent } from '@keycloakify/angular-email';
 import { LayoutComponent } from 'emails/layout/layout.component';
+import tailwindConfig from 'emails/tailwind.config';
 import type { GetSubject, GetTemplate } from 'keycloakify-emails';
 import { createVariablesHelper } from 'keycloakify-emails/variables';
-import { resolve } from 'node:path';
 
 @Component({
   selector: 'kc-email-test',
   templateUrl: 'email-test.component.html',
+  styleUrls: ['../styles.css'],
+  encapsulation: ViewEncapsulation.None,
   imports: [LayoutComponent, ImgComponent, ContainerComponent, TextComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -28,9 +30,7 @@ export const getTemplate: GetTemplate = async (props) => {
       signalInputsPrefix: '$',
       pretty: true,
       plainText: props.plainText,
-      // relative to ./.tmp-emails
-      cssFilePaths: [resolve(import.meta.dirname, '../emails/styles.css')],
-      tailwindConfig: resolve(import.meta.dirname, '../emails/tailwind.config.js'),
+      tailwindConfig: tailwindConfig,
     },
   });
 };

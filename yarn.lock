@@ -2067,10 +2067,10 @@
   resolved "https://registry.yarnpkg.com/@jsonjoy.com/util/-/util-1.5.0.tgz#6008e35b9d9d8ee27bc4bfaa70c8cbf33a537b4c"
   integrity sha512-ojoNsrIuPI9g6o8UxhraZQSyF2ByJanAY4cTFbc8Mf2AXEF4aQRGY1dJxyJpuyav8r9FGflEt/Ff3u5Nt6YMPA==
 
-"@keycloakify/angular-email@^0.0.1-rc.7":
-  version "0.0.1-rc.7"
-  resolved "https://registry.yarnpkg.com/@keycloakify/angular-email/-/angular-email-0.0.1-rc.7.tgz#76c68aec5a448f2c710350c90cc4c64f86125a4e"
-  integrity sha512-w9m3dZYjXcXmolFqqCjQe2nLwLpW7fkjhYaACExVm4dsfFRUJwoljIESR2KtcFpb0ridXSqrAFWq7kSCZcGlCQ==
+"@keycloakify/angular-email@^0.0.1-rc.10":
+  version "0.0.1-rc.10"
+  resolved "https://registry.yarnpkg.com/@keycloakify/angular-email/-/angular-email-0.0.1-rc.10.tgz#7427da4563cced8612c52fcc3aa580b0ec7d91e6"
+  integrity sha512-tnoOBoPPGGApBrNbonsjJ+jUMwFqzwoaiiBR1mlzwDVMTywRdD4xqMeVc40ubOJh25Q++ABI9/Z+8p4wKfmSOg==
   dependencies:
     "@angular/build" "^19.1.0"
     "@angular/platform-server" "^19.1.0"
@@ -2078,6 +2078,7 @@
     cheerio "^1.0.0"
     html-to-text "^9.0.5"
     tailwindcss-preset-email "^1.4.0"
+    termost "^1.4.0"
     tslib "^2.3.0"
 
 "@keycloakify/angular@^0.2.17":
@@ -6587,6 +6588,14 @@ enhanced-resolve@^5.0.0, enhanced-resolve@^5.17.1, enhanced-resolve@^5.7.0:
     graceful-fs "^4.2.4"
     tapable "^2.2.0"
 
+enquirer@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/enquirer/-/enquirer-2.4.1.tgz#93334b3fbd74fc7097b224ab4a8fb7e40bf4ae56"
+  integrity sha512-rRqJg/6gd538VHvR3PSrdRBb/1Vy2YfzHqzvbhGIQpDRKIa4FgV/54b5Q1xYSxOOwKvjXweS26E0Q+nAMwp2pQ==
+  dependencies:
+    ansi-colors "^4.1.1"
+    strip-ansi "^6.0.1"
+
 enquirer@~2.3.6:
   version "2.3.6"
   resolved "https://registry.yarnpkg.com/enquirer/-/enquirer-2.3.6.tgz#2a7fe5dd634a1e4125a975ec994ff5456dc3734d"
@@ -8870,7 +8879,7 @@ listhen@^1.9.0:
     untun "^0.1.3"
     uqr "^0.1.2"
 
-listr2@8.2.5:
+listr2@8.2.5, listr2@^8.2.5:
   version "8.2.5"
   resolved "https://registry.yarnpkg.com/listr2/-/listr2-8.2.5.tgz#5c9db996e1afeb05db0448196d3d5f64fec2593d"
   integrity sha512-iyAZCeyD+c1gPyE9qpFu8af0Y+MRtmKOncdGoA2S5EY8iFq99dmmvkNnHiWo+pj0s7yH7l3KPIgee77tKpXPWQ==
@@ -12614,6 +12623,15 @@ telejson@^7.2.0:
   integrity sha512-1QTEcJkJEhc8OnStBx/ILRu5J2p0GjvWsBx56bmZRqnrkdBMUe+nX92jxV+p3dB4CP6PZCdJMQJwCggkNBMzkQ==
   dependencies:
     memoizerific "^1.11.3"
+
+termost@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/termost/-/termost-1.4.0.tgz#03dbe81f87be99ca0c4100613a8fb4f424033117"
+  integrity sha512-+3faQvz4kqNauAY2cgN83v7/l1yTMokdEJxZ89iPwpufLoRUOXGnIBLIIBJRYqIFTNqqxXfsnIBATKmJwbo71Q==
+  dependencies:
+    enquirer "^2.4.1"
+    listr2 "^8.2.5"
+    picocolors "^1.1.1"
 
 terser-webpack-plugin@^5.3.1, terser-webpack-plugin@^5.3.10, terser-webpack-plugin@^5.3.3:
   version "5.3.11"
