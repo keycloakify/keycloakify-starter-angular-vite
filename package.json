@@ -52,7 +52,7 @@
     "@angular/build": "^19.2.1",
     "@angular/cli": "^19.2.1",
     "@angular/compiler-cli": "^19.2.1",
-    "@keycloakify/angular-email": "^0.0.1-rc.7",
+    "@keycloakify/angular-email": "^0.0.1-rc.10",
     "@nx/angular": "^20.5.0",
     "@nx/devkit": "^20.5.0",
     "@nx/vite": "^20.5.0",
