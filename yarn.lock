@@ -8060,10 +8060,10 @@ karma-source-map-support@1.4.0:
   dependencies:
     source-map-support "^0.5.5"
 
-keycloakify@^11.8.18:
-  version "11.8.18"
-  resolved "https://registry.yarnpkg.com/keycloakify/-/keycloakify-11.8.18.tgz#9e4d0abd2f9a09fc0268fa726f4295ac3627d0d4"
-  integrity sha512-+GOfPkvNWirVkjrRomR44Oc5OdG4m0RjjTLkQ1/f8ourlSDPjBMF5uSYo8TJVcCEk/jIKh2dJSajZDAPPkXMWw==
+keycloakify@^11.8.20:
+  version "11.8.20"
+  resolved "https://registry.yarnpkg.com/keycloakify/-/keycloakify-11.8.20.tgz#520e38d8393241ca21d334c7e37da67964aba423"
+  integrity sha512-ZEuL5f0gmypj3JevnO4aqmQaHovOci2DmD8RPYhAVBuY4TQt0OhR5nzWPWx0p2VvaFMwZ4KGsahBTW0G+y7irw==
   dependencies:
     tsafe "^1.8.5"
 
