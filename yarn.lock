@@ -8060,10 +8060,10 @@ karma-source-map-support@1.4.0:
   dependencies:
     source-map-support "^0.5.5"
 
-keycloakify@^11.8.17:
-  version "11.8.17"
-  resolved "https://registry.yarnpkg.com/keycloakify/-/keycloakify-11.8.17.tgz#9e4fda7959ab2cfad1c388e54a5d9df5e6056e0f"
-  integrity sha512-4VaQADY77wyiu1YeDnJMoH0QQsYZUFJ58wa7vCw6QkB8Ktgp3NAIWver5/cNSB2VYXHoeWXe3Wa13dzqqdKSWg==
+keycloakify@^11.8.20:
+  version "11.8.20"
+  resolved "https://registry.yarnpkg.com/keycloakify/-/keycloakify-11.8.20.tgz#520e38d8393241ca21d334c7e37da67964aba423"
+  integrity sha512-ZEuL5f0gmypj3JevnO4aqmQaHovOci2DmD8RPYhAVBuY4TQt0OhR5nzWPWx0p2VvaFMwZ4KGsahBTW0G+y7irw==
   dependencies:
     tsafe "^1.8.5"
 
@@ -9251,10 +9251,10 @@ ohash@^2.0.10, ohash@^2.0.11, ohash@^2.0.5:
   resolved "https://registry.yarnpkg.com/ohash/-/ohash-2.0.11.tgz#60b11e8cff62ca9dee88d13747a5baa145f5900b"
   integrity sha512-RdR9FQrFwNBNXAr4GixM8YaRZRJ5PUWbKYbE5eOsrwAjJW0q2REGcf79oYPsLyskQCZG1PLN+S/K1V00joZAoQ==
 
-oidc-spa@^5.6.2:
-  version "5.6.2"
-  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-5.6.2.tgz#8bcb6812cad869e17e3f863ddb5d0a756c001fa3"
-  integrity sha512-yx6iwCAU8OAvYxK6rzhvAKnD4xgZZljk/PWo4tDMgMyPvHyU1mGLWJVml6Z992yKTxduiWdvZFeRnn6GblS1vQ==
+oidc-spa@^6.9.9:
+  version "6.9.9"
+  resolved "https://registry.yarnpkg.com/oidc-spa/-/oidc-spa-6.9.9.tgz#6f216b991be7acbb71ba017f9904e5b518029b4e"
+  integrity sha512-k86tsi4P2QwaVXztIfgiHi3XPkKn8hStFjjLGqBvwC9bNOM/yCWV/qnmxJchbyp5tLg3MDPn8ViHcPIriiT9fA==
 
 on-finished@2.4.1, on-finished@^2.3.0, on-finished@^2.4.1:
   version "2.4.1"
