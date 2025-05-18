@@ -1,0 +1,12 @@
+<kc-email
+  preview="Here is a preview"
+  [locale]="$locale()"
+>
+  <ng-email-text styleClass="text-gray-500 text-left leading-6">
+    To update your {{ realmName }} account with email address {{ newEmail }}, click the link below<br />
+    <a [href]="link">{{ link }}</a>
+    <br />
+    This link will expire within {{ linkExpiration }}.<br />
+    If you don't want to proceed with this modification, just ignore this message.
+  </ng-email-text>
+</kc-email>

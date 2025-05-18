@@ -1,0 +1,13 @@
+<kc-email
+  preview="Here is a preview"
+  [locale]="$locale()"
+>
+  <ng-email-text styleClass="text-gray-500 text-left leading-6">
+    <fm-if [condition]="hasName"> Hi, {{ firstName }} {{ lastName }}.<br /> </fm-if>
+    You were invited to join the {{ organizationName }} organization. Click the link below to join.<br />
+    <a [href]="link">Link to join the organization</a>
+    <br />
+    This link will expire within {{ linkExpiration }}.<br />
+    If you don't want to join the organization, just ignore this message.
+  </ng-email-text>
+</kc-email>
