@@ -30,6 +30,8 @@ export default tseslint.config(
       '@typescript-eslint/no-inferrable-types': 'off',
       '@typescript-eslint/no-namespace': 'off',
       '@typescript-eslint/no-empty-object-type': 'off',
+      '@angular-eslint/no-input-rename': 'off',
+      '@angular-eslint/no-output-rename': 'off',
       '@angular-eslint/directive-selector': [
         'error',
         {
