@@ -1,0 +1,14 @@
+@let locale = $locale();
+@let preview = $preview();
+
+<ng-email-html [lang]="locale">
+  <ng-email-head></ng-email-head>
+  <ng-email-preview [preview]="preview"></ng-email-preview>
+  <ng-email-body styleClass="bg-[#f6f9fc] font-default">
+    <ng-email-container styleClass="bg-white mx-auto mb-16 pt-5 pb-12">
+      <ng-email-section styleClass="px-12">
+        <ng-content></ng-content>
+      </ng-email-section>
+    </ng-email-container>
+  </ng-email-body>
+</ng-email-html>
