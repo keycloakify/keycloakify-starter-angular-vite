@@ -6,7 +6,6 @@ const isDevMode = process.env.NODE_ENV === 'development';
 
 const config: StorybookConfig & StorybookConfigVite = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
-  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],
   framework: {
     name: '@storybook/angular',
     options: {},
