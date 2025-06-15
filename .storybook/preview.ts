@@ -1,5 +1,5 @@
 import 'zone.js';
-import type { Preview } from '@storybook/angular';
+import { type Preview } from '@analogjs/storybook-angular';
 
 const preview: Preview = {
   parameters: {

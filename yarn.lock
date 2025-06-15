@@ -30,6 +30,13 @@
     nitropack "^2.11.0"
     vitefu "^1.0.0"
 
+"@analogjs/storybook-angular@^1.17.1":
+  version "1.17.1"
+  resolved "https://registry.yarnpkg.com/@analogjs/storybook-angular/-/storybook-angular-1.17.1.tgz#70292a7da264b155fd842f8a0194dfbc81089535"
+  integrity sha512-+dCBuxYk6xAh8CK7kem04Fg5umdnssIMgFJzMMbehtA87G/njfFqWhPE1w3yHIMWoZRId75NU1I5MzRdTN5c8Q==
+  dependencies:
+    "@storybook/builder-vite" ">=8.6.0 || next"
+
 "@analogjs/vite-plugin-angular@^1.17.1":
   version "1.17.1"
   resolved "https://registry.yarnpkg.com/@analogjs/vite-plugin-angular/-/vite-plugin-angular-1.17.1.tgz#067b7e1380fd4b3c57d06c635aacf11d1d6e5fd1"
@@ -3629,7 +3636,7 @@
     tsconfig-paths-webpack-plugin "^4.0.1"
     webpack "5"
 
-"@storybook/builder-vite@^9.0.9":
+"@storybook/builder-vite@>=8.6.0 || next":
   version "9.0.9"
   resolved "https://registry.yarnpkg.com/@storybook/builder-vite/-/builder-vite-9.0.9.tgz#3073a191718c42181d6fb00c8de2a9823ece9636"
   integrity sha512-qRjXNKc2V5OzGAJ+O82eYlXX7kE9PVGiTAuwaysMSEFiWBEkHVm6SeSwAJFDcKlD4kS60fRj3xWaa724OCqMbw==

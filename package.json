@@ -15,7 +15,8 @@
     "build-keycloak-theme": "npm run build && keycloakify build",
     "test": "ng test",
     "lint": "ng lint --fix",
-    "storybook": "storybook dev --port 4400"
+    "storybook": "ng run keycloakify-starter-angular-vite:storybook",
+    "build-storybook": "ng run keycloakify-starter-angular-vite:build-storybook"
   },
   "author": "u/luca-peruzzo, u/kathari00, u/garronej",
   "license": "MIT",
@@ -43,6 +44,7 @@
   },
   "devDependencies": {
     "@analogjs/platform": "^1.17.1",
+    "@analogjs/storybook-angular": "^1.17.1",
     "@analogjs/vite-plugin-angular": "^1.17.1",
     "@analogjs/vitest-angular": "^1.17.1",
     "@angular-devkit/architect": "^0.2000.2",
@@ -54,7 +56,6 @@
     "@nx/devkit": "^21.2.0",
     "@nx/vite": "^21.2.0",
     "@storybook/angular": "^9.0.9",
-    "@storybook/builder-vite": "^9.0.9",
     "@types/node": "^24.0.1",
     "@typescript-eslint/types": "^8.34.0",
     "@typescript-eslint/utils": "^8.34.0",
