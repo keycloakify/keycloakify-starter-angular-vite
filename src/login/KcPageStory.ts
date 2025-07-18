@@ -14,7 +14,12 @@ const kcContextExtension: KcContextExtension = {
     ...kcEnvDefaults,
   },
 };
-const kcContextExtensionPerPage: KcContextExtensionPerPage = {};
+const kcContextExtensionPerPage: KcContextExtensionPerPage = {
+  'mobile_number_form.ftl': {
+    phonenumber: '0147 123 456',
+    mobileInputFieldPlaceholder: 'Enter your mobile number',
+  },
+};
 
 export const { getKcContextMock } = createGetKcContextMock({
   kcContextExtension,
