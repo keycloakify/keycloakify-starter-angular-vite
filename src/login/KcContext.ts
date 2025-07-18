@@ -7,6 +7,10 @@ export type KcContextExtension = {
 };
 
 export type KcContextExtensionPerPage = {
+  'mobile_number_form.ftl': {
+    phonenumber: string;
+    mobileInputFieldPlaceholder: string;
+  };
   // Here you can declare additional properties on the KcContext
   // See: https://docs.keycloakify.dev/faq-and-help/some-values-you-need-are-missing-from-in-kccontext
 };
