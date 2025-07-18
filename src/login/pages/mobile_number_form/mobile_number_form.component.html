@@ -1,0 +1,70 @@
+@let url = kcContext.url;
+@let phonenumber = kcContext.phonenumber;
+@let mobileInputFieldPlaceholder = kcContext.mobileInputFieldPlaceholder;
+@let client = kcContext.client;
+
+<ng-template #headerNode>
+  @let realm = kcContext.realm;
+  {{ i18n.advancedMsgStr('smsPhoneNumberTitle', realm.displayName) }}
+</ng-template>
+
+<ng-template #infoNode>
+  {{ i18n.msgStr('smsPhoneNumberTitle') }}
+</ng-template>
+
+<form
+  id="kc-sms-code-login-form"
+  method="post"
+  [kcClass]="'kcFormClass'"
+  [action]="url.loginAction"
+  onsubmit="phonenumber.disabled = true; return true;"
+>
+  <div [kcClass]="'kcFormGroupClass'">
+    <div [kcClass]="'kcLabelWrapperClass'">
+      <label
+        for="code"
+        [kcClass]="'kcLabelClass'"
+        >{{ i18n.msgStr('smsPhoneNumberLabel') }}</label
+      >
+    </div>
+    <div [kcClass]="'kcInputWrapperClass'">
+      <input
+        type="tel"
+        id="code"
+        pattern="[0-9\+\-\.\ ]"
+        name="mobile_number"
+        [kcClass]="'kcInputClass'"
+        placeholder="{{ mobileInputFieldPlaceholder }}"
+        autofocus
+      />
+    </div>
+  </div>
+  <div [kcClass]="{ kcFormGroupClass: true, kcFormSettingClass: true }">
+    <div
+      id="kc-form-options"
+      [kcClass]="'kcFormOptionsClass'"
+    >
+      <div [kcClass]="'kcFormOptionsWrapperClass'">
+        <span>
+          <a
+            id="backToApplication"
+            [href]="client.baseUrl"
+            [innerHTML]="i18n.msgStr('backToApplication') | kcSanitize: 'html'"
+          ></a
+        ></span>
+      </div>
+    </div>
+
+    <div
+      id="kc-form-buttons"
+      [kcClass]="'kcFormButtonsClass'"
+    >
+      <input
+        name="phonenumber"
+        [kcClass]="['kcButtonClass', 'kcButtonPrimaryClass', 'kcButtonBlockClass', 'kcButtonLargeClass']"
+        type="submit"
+        value="{{ i18n.msgStr('doSubmitMobile') }}"
+      />
+    </div>
+  </div>
+</form>
