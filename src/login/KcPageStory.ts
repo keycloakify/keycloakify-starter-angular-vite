@@ -1,6 +1,6 @@
 import { Component, inject, OnInit, Type } from '@angular/core';
 import { provideKeycloakifyAngular } from '@keycloakify/angular/login/providers/keycloakify-angular';
-import { TemplateComponent } from '@keycloakify/angular/login/template';
+import { TemplateComponent } from './template/template.component';
 import { getKcPage } from './KcPage';
 import { getI18n } from './i18n';
 import { KC_LOGIN_CONTEXT } from '@keycloakify/angular/login/tokens/kc-context';

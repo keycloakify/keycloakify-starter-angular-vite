@@ -49,3 +49,23 @@ npx keycloakify initialize-account-theme
 ```bash
 npx keycloakify initialize-email-theme
 ```
+
+# Issue Description
+
+When importing images from the `login/assets` directory within styles (e.g., CSS or SCSS) of a component, running `npm run build-keycloak-theme` fails to build the package.
+This is caused by the postBuild configuration in `vite.config.ts`, which starts scanning dependencies from `login/assets`, but fails to find them, resulting in an incomplete build. There is currently no way to bypass this step or force the build to ignore these missing assets.
+
+### Steps to Reproduce
+1. Import an image from login/assets in the style block of any component:
+```css
+.test-class {
+  background-image: url('login/assets/kc-logo.png'); 
+}
+```
+2. Run the build script:
+```bash
+npm run build-keycloak-theme
+```
+3. During the build, the `postBuild` logic in `vite.config.ts` tries to scan dependencies.
+
+4. The build process fails because it cannot resolve dependencies from login/assets.
