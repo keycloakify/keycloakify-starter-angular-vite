@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, input, ViewEncapsulation } from '@angular/core';
 import { render, TextComponent } from '@keycloakify/angular-email';
-import { IfComponent } from 'emails/freemarker/condition.component';
-import { LayoutComponent } from 'emails/layout/layout.component';
-import tailwindConfig from 'emails/tailwind.config';
+import { IfComponent } from '../../freemarker/condition.component';
+import { LayoutComponent } from '../../layout/layout.component';
+import tailwindConfig from '../../tailwind.config';
 import type { GetSubject, GetTemplate } from 'keycloakify-emails';
 import { createVariablesHelper } from 'keycloakify-emails/variables';
 

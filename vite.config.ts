@@ -33,7 +33,7 @@ export default defineConfig(({ mode }) => ({
             external: ['juice', 'postcss', 'tailwindcss-v3'],
             format: 'esm',
             outExtension: { '.js': '.mjs' },
-            plugins: [angularEsbuildPlugin(import.meta.dirname)],
+            plugins: [angularEsbuildPlugin(join(import.meta.dirname, '/emails'))],
           },
         });
       },
