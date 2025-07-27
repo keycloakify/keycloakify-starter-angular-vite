@@ -4,7 +4,7 @@
     <br/>
 </p>
 
-This starter is based on Vite and Angular. There is also [a Webpack based starter](https://github.com/keycloakify/keycloakify-starter-angular).
+This starter is based on Vite and Angular. There is also [a native esbuild Angular starter](https://github.com/keycloakify/keycloakify-starter-angular).
 
 # Quick start
 
