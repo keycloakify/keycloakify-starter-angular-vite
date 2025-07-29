@@ -44,8 +44,10 @@
   },
   "devDependencies": {
     "@analogjs/platform": "1.19.1",
+    "@analogjs/storybook-angular": "^1.19.2",
     "@analogjs/vite-plugin-angular": "1.19.1",
     "@analogjs/vitest-angular": "^1.19.1",
+    "@angular-devkit/build-angular": "^20.1.3",
     "@angular/build": "^20.1.3",
     "@angular/cli": "^20.1.3",
     "@angular/compiler-cli": "^20.1.3",
