@@ -131,7 +131,7 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
-"@analogjs/platform@^1.19.1":
+"@analogjs/platform@1.19.1":
   version "1.19.1"
   resolved "https://registry.yarnpkg.com/@analogjs/platform/-/platform-1.19.1.tgz#6e732f9941001c3a6212373df03d95cc9d957e81"
   integrity sha512-5CMcJ+v2yfvtLAdDcowwiX26CjfLX8segqzyhVm72lZpFLemxc483mPoEB50T6+Z8w8cWyNqEot3t8XdYl20MQ==
@@ -141,7 +141,7 @@
     nitropack "^2.11.0"
     vitefu "^1.0.0"
 
-"@analogjs/vite-plugin-angular@^1.19.1":
+"@analogjs/vite-plugin-angular@1.19.1", "@analogjs/vite-plugin-angular@^1.19.1":
   version "1.19.1"
   resolved "https://registry.yarnpkg.com/@analogjs/vite-plugin-angular/-/vite-plugin-angular-1.19.1.tgz#80d7db03b84f43ab6b687bdc3b1f95db4fba289d"
   integrity sha512-bl38MZtcP4xuT5+HgdL3H4zNMXlUjLSkk8zONw7bccNozWWxHKzI5u81AacFYjB7SYXR6Z3cWDYMEtVXZO5f2A==
