@@ -35,8 +35,8 @@
     "@angular/platform-browser": "^20.1.7",
     "@angular/platform-browser-dynamic": "^20.1.7",
     "@angular/router": "^20.1.7",
-    "@keycloakify/angular": "^20.1.5",
-    "keycloakify": "^11.9.2",
+    "@keycloakify/angular": "^20.1.6",
+    "keycloakify": "^11.9.3",
     "rxjs": "~7.8.2",
     "tslib": "^2.8.1",
     "zone.js": "~0.15.1"
