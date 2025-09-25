@@ -36,7 +36,10 @@
     "@angular/platform-browser-dynamic": "^20.3.12",
     "@angular/router": "^20.3.12",
     "@keycloakify/angular": "^20.1.12",
+    "@keycloakify/angular-email": "^1.0.9",
+    "esbuild": "^0.27.0",
     "keycloakify": "^11.11.3",
+    "keycloakify-emails": "^3.3.1",
     "rxjs": "~7.8.2",
     "tslib": "^2.8.1",
     "zone.js": "~0.15.1"
@@ -53,6 +56,8 @@
     "@nx/angular": "^22.0.3",
     "@nx/vite": "^22.0.3",
     "@storybook/angular": "^10.0.7",
+    "@tailwindcss/postcss": "^4.1.17",
+    "@tailwindcss/vite": "^4.1.17",
     "@types/node": "^24.10.1",
     "@typescript-eslint/types": "^8.46.4",
     "@typescript-eslint/utils": "^8.46.4",
@@ -62,11 +67,17 @@
     "eslint-plugin-storybook": "^10.0.7",
     "jsdom": "^27.2.0",
     "npm-check-updates": "^19.1.2",
+    "postcss": "^8.5.6",
+    "postcss-calc": "^10.1.1",
+    "postcss-custom-properties": "^14.0.6",
+    "postcss-logical": "^8.1.0",
+    "postcss-preset-env": "^10.4.0",
     "prettier": "^3.6.2",
     "storybook": "^10.0.7",
+    "tailwindcss": "^4.1.17",
     "typescript": "~5.9.3",
-    "typescript-eslint": "^8.46.1",
-    "vite": "^7.1.11",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.2",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^4.0.9"
   },
@@ -75,7 +86,7 @@
     "vite": "^7.0.6"
   },
   "overrides": {
-    "esbuild": "^0.25.4",
+    "esbuild": "^0.27.0",
     "@analogjs/platform": {
       "vite": "$vite"
     }
