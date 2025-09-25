@@ -47,7 +47,7 @@ export default defineConfig(() => ({
             ],
             format: 'esm',
             outExtension: { '.js': '.mjs' },
-            plugins: [angularEsbuildPlugin(join(import.meta.dirname, '/emails'))],
+            plugins: [angularEsbuildPlugin(join(import.meta.dirname, 'emails'))],
           },
         });
       },
