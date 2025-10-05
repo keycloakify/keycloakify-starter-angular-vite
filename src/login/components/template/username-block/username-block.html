@@ -1,0 +1,36 @@
+@let auth = kcContext.auth;
+@let url = kcContext.url;
+<div [kcClass]="['kcFormClass', 'kcContentWrapperClass']">
+  <kc-group
+    [inputId]="inputId"
+    [label]="usernameLabel"
+  >
+    <div [kcClass]="'kcInputGroup'">
+      <div [kcClass]="['kcInputGroupItemClass', 'kcFill']">
+        <span [kcClass]="['kcInputClass', 'kcFormReadOnlyClass']">
+          <input
+            [id]="inputId"
+            [value]="auth?.attemptedUsername ?? ''"
+            readonly
+          />
+        </span>
+      </div>
+      <div [kcClass]="'kcInputGroupItemClass'">
+        <button
+          id="reset-login"
+          [kcClass]="'kcFormPasswordVisibilityButtonClass'"
+          class="kc-login-tooltip"
+          type="button"
+          [attr.aria-label]="i18n.msgStr('restartLoginTooltip')"
+          (click)="location.href = url.loginRestartFlowUrl"
+        >
+          <i
+            class="fa-sync-alt fas"
+            aria-hidden="true"
+          ></i>
+          <span class="kc-tooltip-text">{{ i18n.msgStr('restartLoginTooltip') }}</span>
+        </button>
+      </div>
+    </div>
+  </kc-group>
+</div>

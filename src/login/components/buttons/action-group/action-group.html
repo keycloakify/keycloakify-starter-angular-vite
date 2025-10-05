@@ -1,0 +1,8 @@
+<div [kcClass]="'kcFormGroupClass'">
+  <div
+    [kcClass]="'kcFormActionGroupClass'"
+    [ngClass]="{ horizontal: horizontal() ? 'pf-v5-u-flex-nowrap' : 'pf-v5-u-flex-wrap' }"
+  >
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+@let realm = kcContext.realm;
+@let url = kcContext.url;
+@let login = kcContext.login;
+@let usernameHidden = kcContext.usernameHidden;
+@let messagesPerField = kcContext.messagesPerField;
+
+<div id="kc-form">
+  <div id="kc-form-wrapper">
+    <!-- login.html -->
+    @if (realm?.password) {
+      <form
+        id="kc-form-login"
+        method="post"
+        [action]="url?.loginAction"
+        [kcClass]="'kcFormClass'"
+        novalidate="novalidate"
+      >
+        @if (!usernameHidden) {
+          <kc-input
+            name="username"
+            [label]="usernameLabel"
+            [error]="messagesPerField.getFirstError('username', 'password')"
+            [autofocus]="true"
+            [value]="login.username ?? ''"
+            autocomplete="username"
+          >
+          </kc-input>
+
+          <kc-password
+            name="password"
+            [label]="i18n.msgStr('password')"
+            [forgotPassword]="realm.resetPasswordAllowed"
+            [autofocus]="!!usernameHidden"
+            [autocomplete]="'current-password'"
+            error=""
+          >
+          </kc-password>
+        } @else {
+          <kc-password
+            name="password"
+            label="password"
+            [forgotPassword]="realm.resetPasswordAllowed"
+            [autofocus]="!!usernameHidden"
+            [autocomplete]="'current-password'"
+            error=""
+          >
+            @if (realm.rememberMe && !usernameHidden) {
+              <kc-checkbox
+                name="rememberMe"
+                [label]="i18n.msgStr('rememberMe')"
+                [value]="!!login.rememberMe"
+              ></kc-checkbox>
+            }
+          </kc-password>
+        }
+
+        <input
+          type="hidden"
+          name="credentialId"
+          id="id-hidden-input"
+          value=""
+        />
+
+        <kc-login-button></kc-login-button>
+      </form>
+    }
+  </div>
+</div>
