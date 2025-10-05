@@ -244,3 +244,19 @@ export const WithSocialProvidersAndWithoutRememberMe: Story = {
     }
   }
 };
+
+export const WithConditionalUIData: Story = {
+  globals: {
+    kcContext: {
+      url: {
+        resourcesPath: '',
+      },
+      enableWebAuthnConditionalUI: true,
+      isUserIdentified: 'true',
+      challenge: 'test-challenge-string-abc123',
+      userVerification: 'preferred',
+      rpId: 'example.com',
+      createTimeout: 60000,
+    },
+  },
+};

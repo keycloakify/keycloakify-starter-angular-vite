@@ -8,12 +8,20 @@ import { PasswordComponent } from '../../components/field/password';
 import { InputComponent } from '../../components/field/input';
 import { CheckboxComponent } from '../../components/field/checkbox';
 import { LoginButtonComponent } from '../../components/buttons/login-button';
+import { ConditionalUiDataComponent } from '../../components/conditional-ui-data';
 
 @Component({
   selector: 'kc-form',
   templateUrl: './form.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [KcClassDirective, InputComponent, PasswordComponent, CheckboxComponent, LoginButtonComponent],
+  imports: [
+    KcClassDirective,
+    InputComponent,
+    PasswordComponent,
+    CheckboxComponent,
+    LoginButtonComponent,
+    ConditionalUiDataComponent,
+  ],
 })
 export class LoginFormComponent {
   kcContext = inject<Extract<KcContext, { pageId: 'login.ftl' }>>(KC_LOGIN_CONTEXT);

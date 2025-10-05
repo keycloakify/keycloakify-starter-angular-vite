@@ -3,10 +3,12 @@
 @let login = kcContext.login;
 @let usernameHidden = kcContext.usernameHidden;
 @let messagesPerField = kcContext.messagesPerField;
+@let enableWebAuthnConditionalUI = kcContext.enableWebAuthnConditionalUI;
 
 <div id="kc-form">
   <div id="kc-form-wrapper">
     <!-- login.html -->
+
     @if (realm?.password) {
       <form
         id="kc-form-login"
@@ -66,3 +68,6 @@
     }
   </div>
 </div>
+@if (enableWebAuthnConditionalUI) {
+  <kc-conditional-ui-data></kc-conditional-ui-data>
+}

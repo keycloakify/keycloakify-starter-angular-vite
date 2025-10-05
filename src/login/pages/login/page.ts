@@ -7,11 +7,12 @@ import { KC_LOGIN_CONTEXT } from '../../../@keycloakify/login-ui-angular/login/t
 import { LOGIN_I18N } from '../../../@keycloakify/login-ui-angular/login/tokens/i18n';
 import { SocialProvidersComponent } from '../../components/template/social-providers';
 import { RegistrationLinkComponent } from '../../components/template/registration-link';
+import { ConditionalUiDataComponent } from '../../components/conditional-ui-data';
 
 @Component({
   selector: 'kc-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [LoginFormComponent, SocialProvidersComponent, RegistrationLinkComponent],
+  imports: [LoginFormComponent, SocialProvidersComponent, RegistrationLinkComponent, ConditionalUiDataComponent],
   providers: [
     {
       provide: ComponentReference,

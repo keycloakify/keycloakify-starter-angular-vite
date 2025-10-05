@@ -1,0 +1,43 @@
+<form
+  id="webauth"
+  [action]="kcContext.url.loginAction"
+  method="post"
+>
+  <input
+    type="hidden"
+    id="clientDataJSON"
+    name="clientDataJSON"
+  />
+  <input
+    type="hidden"
+    id="authenticatorData"
+    name="authenticatorData"
+  />
+  <input
+    type="hidden"
+    id="signature"
+    name="signature"
+  />
+  <input
+    type="hidden"
+    id="credentialId"
+    name="credentialId"
+  />
+  <input
+    type="hidden"
+    id="userHandle"
+    name="userHandle"
+  />
+  <input
+    type="hidden"
+    id="error"
+    name="error"
+  />
+</form>
+
+<a
+  [id]="authButtonId"
+  [kcClass]="'kcFormButtonsClass'"
+>
+  {{ i18n.msgStr('webauthn-doAuthenticate') }}
+</a>
