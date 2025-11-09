@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ToNumberPipe implements PipeTransform {
     transform(value: string | number): number {
-        const number = parseInt(`${value}`);
+        const number = Number(`${value}`);
         if (isNaN(number)) throw new Error('number is NaN');
         return number;
     }

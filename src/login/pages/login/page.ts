@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, forwardRef, inject, type TemplateRef, viewChild } from '@angular/core';
-import { LoginFormComponent } from './form';
+import { LoginFormComponent } from './form/form';
 import { ComponentReference } from '../../../@keycloakify/login-ui-angular/login/classes/component-reference';
 import { I18n } from '../../i18n';
 import { KcContext } from '../../KcContext';

@@ -27,7 +27,7 @@ type KcClassSupportedTypes =
     | null
     | undefined;
 
-type NgClassSupportedTypes =
+type ClassSupportedTypes =
     | string[]
     | Set<string>
     | { [key: string]: any }
@@ -37,7 +37,7 @@ type NgClassSupportedTypes =
 @Directive({ selector: '[kcClass]' })
 export class KcClassDirective implements DoCheck {
     private initialClasses: string[] = [];
-    private rawClass: NgClassSupportedTypes;
+    private rawClass: ClassSupportedTypes;
     private rawKcClass: KcClassSupportedTypes;
 
     private stateMap = new Map<string | ClassKey, CssClassState>();
@@ -46,13 +46,12 @@ export class KcClassDirective implements DoCheck {
     readonly #host = inject(ComponentReference);
 
     @Input('class')
-    set klass(value: string) {
-        this.initialClasses = value != null ? value.trim().split(/\s+/) : [];
-    }
-
-    @Input('ngClass')
-    set ngClass(value: string | NgClassSupportedTypes) {
-        this.rawClass = typeof value === 'string' ? value.trim().split(/\s+/) : value;
+    set klass(value: string | ClassSupportedTypes) {
+        if (typeof value === 'string') {
+            this.initialClasses = value != null ? value.trim().split(/\s+/) : [];
+        } else {
+            this.rawClass = value;
+        }
     }
 
     @Input('kcClass')
@@ -65,7 +64,7 @@ export class KcClassDirective implements DoCheck {
         for (const klass of this.initialClasses) {
             this._updateState(klass, true);
         }
-        // classes from the [ngClass] binding
+        // classes from the [class] binding
         const rawClass = this.rawClass;
         if (Array.isArray(rawClass) || rawClass instanceof Set) {
             for (const klass of rawClass) {

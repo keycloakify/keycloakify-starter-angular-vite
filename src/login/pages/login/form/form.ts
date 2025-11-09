@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { KcClassDirective } from '../../../@keycloakify/login-ui-angular/login/directives/kc-class';
-import { LOGIN_I18N } from '../../../@keycloakify/login-ui-angular/login/tokens/i18n';
-import { I18n } from '../../i18n';
-import { KcContext } from '../../../kc.gen';
-import { KC_LOGIN_CONTEXT } from '../../../@keycloakify/login-ui-angular/login/tokens/kc-context';
-import { PasswordComponent } from '../../components/field/password';
-import { InputComponent } from '../../components/field/input';
-import { CheckboxComponent } from '../../components/field/checkbox';
-import { LoginButtonComponent } from '../../components/buttons/login-button';
-import { ConditionalUiDataComponent } from '../../components/conditional-ui-data';
+import { KcClassDirective } from '../../../../@keycloakify/login-ui-angular/login/directives/kc-class';
+import { LOGIN_I18N } from '../../../../@keycloakify/login-ui-angular/login/tokens/i18n';
+import { I18n } from '../../../i18n';
+import { KcContext } from '../../../../kc.gen';
+import { KC_LOGIN_CONTEXT } from '../../../../@keycloakify/login-ui-angular/login/tokens/kc-context';
+import { PasswordComponent } from '../../../components/field/password';
+import { InputComponent } from '../../../components/field/input';
+import { CheckboxComponent } from '../../../components/field/checkbox';
+import { LoginButtonComponent } from '../../../components/buttons/login-button';
+import { ConditionalUiDataComponent } from '../../../components/conditional-ui-data';
 
 @Component({
   selector: 'kc-form',
