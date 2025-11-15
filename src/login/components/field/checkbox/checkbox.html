@@ -1,0 +1,29 @@
+@let nameValue = name();
+@let labelValue = label();
+@let valueValue = value();
+@let requiredValue = required();
+
+<div [kcClass]="'kcCheckboxClass'">
+  <label
+    [for]="nameValue"
+    [kcClass]="'kcCheckboxClass'"
+  >
+    <input
+      [kcClass]="'kcCheckboxInputClass'"
+      type="checkbox"
+      [id]="nameValue"
+      [name]="nameValue"
+      [checked]="valueValue"
+      [required]="requiredValue"
+    />
+
+    <span [kcClass]="'kcCheckboxLabelClass'"> {{ labelValue }}</span>
+    @if (requiredValue) {
+      <span
+        [kcClass]="'kcCheckboxLabelRequiredClass'"
+        aria-hidden="true"
+        >&#42;</span
+      >
+    }
+  </label>
+</div>

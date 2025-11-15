@@ -16,7 +16,7 @@ if (import.meta.env.DEV) {
 */
 (async () => {
   if (window.kcContext === undefined) {
-    const { NoContextComponent } = await import('./no-context.component');
+    const { NoContextComponent } = await import('./no-context');
 
     bootstrapApplication(NoContextComponent, appConfig);
 

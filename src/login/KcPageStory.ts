@@ -1,27 +1,12 @@
+/* eslint-disable @angular-eslint/component-class-suffix */
 import { Component, inject, OnInit, Type } from '@angular/core';
-import { provideKeycloakifyAngular } from '@keycloakify/angular/login/providers/keycloakify-angular';
-import { TemplateComponent } from '@keycloakify/angular/login/template';
-import { getKcPage } from './KcPage';
+import { StoryContext } from '@storybook/angular';
+import { TemplateComponent } from './template';
 import { getI18n } from './i18n';
-import { KC_LOGIN_CONTEXT } from '@keycloakify/angular/login/tokens/kc-context';
-import { createGetKcContextMock } from 'keycloakify/login/KcContext';
-import { kcEnvDefaults, themeNames } from '../kc.gen';
-import type { KcContextExtension, KcContextExtensionPerPage } from './KcContext';
-import { classes, doMakeUserConfirmPassword, doUseDefaultCss } from './KcPage';
-const kcContextExtension: KcContextExtension = {
-  themeName: themeNames[0],
-  properties: {
-    ...kcEnvDefaults,
-  },
-};
-const kcContextExtensionPerPage: KcContextExtensionPerPage = {};
-
-export const { getKcContextMock } = createGetKcContextMock({
-  kcContextExtension,
-  kcContextExtensionPerPage,
-  overrides: {},
-  overridesPerPage: {},
-});
+import { KC_LOGIN_CONTEXT } from '../@keycloakify/login-ui-angular/login/tokens/kc-context';
+import { provideKeycloakifyAngular } from '../@keycloakify/login-ui-angular/login/providers/keycloakify-angular';
+import { classes, doMakeUserConfirmPassword, doUseDefaultCss, getKcPage } from './KcPage';
+import { getKcContextMock } from '../@keycloakify/login-ui-angular/login/KcContextMock';
 
 type StoryContextLike = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

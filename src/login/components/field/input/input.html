@@ -1,0 +1,27 @@
+@let nameValue = name();
+@let labelValue = label();
+@let errorValue = error();
+@let requiredValue = required();
+@let hasError = !!errorValue;
+@let valueValue = value();
+@let autocompleteValue = autocomplete();
+
+<kc-group
+  [name]="nameValue"
+  [label]="labelValue"
+  [error]="errorValue"
+  [required]="requiredValue"
+>
+  <span [kcClass]="{ kcInputClass: true, kcError: hasError }">
+    <input
+      [id]="nameValue"
+      [name]="nameValue"
+      [value]="valueValue"
+      type="text"
+      [autocomplete]="autocompleteValue"
+      [required]="requiredValue"
+      [attr.aria-invalid]="hasError"
+    />
+    <kc-error-icon [error]="errorValue"></kc-error-icon>
+  </span>
+</kc-group>

@@ -1,0 +1,47 @@
+@let inputIdValue = inputId();
+@let nameValue = name();
+@let labelValue = label();
+@let requiredValue = required();
+@let errorValue = error();
+@let idValue = inputIdValue ?? nameValue;
+
+<div [kcClass]="'kcFormGroupClass'">
+  <div [kcClass]="'kcFormGroupLabelClass'">
+    <label
+      [for]="idValue"
+      [kcClass]="'kcFormLabelClass'"
+    >
+      <span [kcClass]="'kcFormLabelTextClass'">
+        {{ labelValue }}
+      </span>
+      @if (requiredValue) {
+        <span
+          [kcClass]="'kcInputRequiredClass'"
+          aria-hidden="true"
+          >&#42;</span
+        >
+      }
+    </label>
+  </div>
+
+  <ng-content></ng-content>
+  <div id="input-error-container-{{ idValue }}">
+    @if (errorValue) {
+      <div
+        [kcClass]="'kcFormHelperTextClass'"
+        aria-live="polite"
+      >
+        <div [kcClass]="'kcInputHelperTextClass'">
+          <div
+            [kcClass]="['kcInputHelperTextItemClass', 'kcError']"
+            id="input-error-{{ idValue }}"
+          >
+            <span [kcClass]="'kcInputErrorMessageClass'">
+              {{ errorValue }}
+            </span>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
