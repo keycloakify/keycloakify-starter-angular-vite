@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, Type } from '@angular/core';
+import { Component, inject, type OnInit, type Type } from '@angular/core';
 import { provideKeycloakifyAngular } from '@keycloakify/angular/login/providers/keycloakify-angular';
 import { TemplateComponent } from '@keycloakify/angular/login/template';
 import { getKcPage } from './KcPage';
