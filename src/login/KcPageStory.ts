@@ -1,13 +1,13 @@
-import { Component, inject, type OnInit, type Type } from '@angular/core';
+import { ChangeDetectorRef, Component, inject, type OnInit, type Type } from '@angular/core';
 import { provideKeycloakifyAngular } from '@keycloakify/angular/login/providers/keycloakify-angular';
 import { TemplateComponent } from '@keycloakify/angular/login/template';
-import { getKcPage } from './KcPage';
-import { getI18n } from './i18n';
 import { KC_LOGIN_CONTEXT } from '@keycloakify/angular/login/tokens/kc-context';
 import { createGetKcContextMock } from 'keycloakify/login/KcContext';
 import { kcEnvDefaults, themeNames } from '../kc.gen';
 import type { KcContextExtension, KcContextExtensionPerPage } from './KcContext';
-import { classes, doMakeUserConfirmPassword, doUseDefaultCss } from './KcPage';
+import { classes, doMakeUserConfirmPassword, doUseDefaultCss, getKcPage } from './KcPage';
+import { getI18n } from './i18n';
+
 const kcContextExtension: KcContextExtension = {
   themeName: themeNames[0],
   properties: {
@@ -59,11 +59,13 @@ export const decorators = (_: unknown, context: StoryContextLike) => ({
 export class KcPageStory implements OnInit {
   pageComponent: Type<unknown> | undefined;
   kcContext = inject(KC_LOGIN_CONTEXT);
+  readonly #cd = inject(ChangeDetectorRef);
   userProfileFormFieldsComponent: Type<unknown> | undefined;
   ngOnInit() {
     getKcPage(this.kcContext.pageId).then((kcPage) => {
       this.pageComponent = kcPage.PageComponent;
       this.userProfileFormFieldsComponent = kcPage.UserProfileFormFieldsComponent;
+      this.#cd.markForCheck();
     });
   }
 }
