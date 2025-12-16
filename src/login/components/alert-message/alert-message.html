@@ -1,0 +1,31 @@
+@let messageValue = kcContext.message;
+@let isAppInitiatedActionValue = kcContext.isAppInitiatedAction;
+
+@if (messageValue && (messageValue.type !== 'warning' || !isAppInitiatedActionValue)) {
+  <div
+    [kcClass]="'kcAlertClass'"
+    [ngClass]="'pf-m-' + (messageValue.type === 'error' ? 'danger' : messageValue.type)"
+  >
+    <div [kcClass]="'kcAlertIconClass'">
+      @switch (messageValue.type) {
+        @case ('success') {
+          <span [kcClass]="'kcFeedbackSuccessIcon'"></span>
+        }
+        @case ('warning') {
+          <span [kcClass]="'kcFeedbackWarningIcon'"></span>
+        }
+        @case ('error') {
+          <span [kcClass]="'kcFeedbackErrorIcon'"></span>
+        }
+        @case ('info') {
+          <span [kcClass]="'kcFeedbackInfoIcon'"></span>
+        }
+      }
+    </div>
+    <span
+      [kcClass]="'kcAlertTitleClass'"
+      class="kc-feedback-text"
+      [innerHTML]="messageValue.summary | kcSanitize: 'html'"
+    ></span>
+  </div>
+}

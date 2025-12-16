@@ -1,10 +1,11 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { i18nBuilder } from '@keycloakify/angular/login';
-import type { ThemeName } from '../kc.gen';
+import { ThemeName } from '../kc.gen';
+import { i18nBuilder } from '../@keycloakify/login-ui/core/i18n/i18nBuilder';
 
-/** @see: https://docs.keycloakify.dev/features/i18n */
-const { getI18n, ofTypeI18n } = i18nBuilder.withThemeName<ThemeName>().build();
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const { getI18n, ofTypeI18n } = i18nBuilder
+  .withThemeName<ThemeName>()
+  .withExtraLanguages({}) // See: https://docs.keycloakify.dev/i18n/adding-support-for-extra-languages
+  .withCustomTranslations({}) // See: https://docs.keycloakify.dev/i18n/adding-new-translation-messages-or-changing-the-default-ones
+  .build();
 type I18n = typeof ofTypeI18n;
-
 export { getI18n, type I18n };

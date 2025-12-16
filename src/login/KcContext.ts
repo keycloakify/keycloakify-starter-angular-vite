@@ -1,5 +1,6 @@
-import type { ExtendKcContext } from 'keycloakify/login';
 import type { KcEnvName, ThemeName } from '../kc.gen';
+import { ExtendKcContext } from '../@keycloakify/login-ui/core/KcContext';
+
 
 export type KcContextExtension = {
   themeName: ThemeName;

@@ -1,0 +1,91 @@
+@let realm = kcContext.realm;
+
+@let isReadyToRender = isReadyToRender$ | async;
+
+@if (isReadyToRender) {
+  <div [kcClass]="'kcLogin'">
+    <div [kcClass]="'kcLoginContainer'">
+      <header
+        id="kc-header"
+        class="pf-v5-c-login__header"
+      >
+        <div
+          id="kc-header-wrapper"
+          class="pf-v5-c-brand"
+          [innerHTML]="i18n.msgStr('loginTitleHtml', realm?.displayNameHtml ?? '') | kcSanitize: 'html'"
+        ></div>
+      </header>
+
+      <main [kcClass]="'kcLoginMain'">
+        <div [kcClass]="'kcLoginMainHeader'">
+          <h1
+            [kcClass]="'kcLoginMainTitle'"
+            id="kc-page-title"
+          >
+            @let header = headerNode && headerNode();
+            @if (header) {
+              <ng-container [ngTemplateOutlet]="header" />
+            }
+          </h1>
+          <kc-language-select />
+        </div>
+
+        <div [kcClass]="'kcLoginMainBody'">
+          @if (displayMessage) {
+            <kc-alert-message />
+          }
+          <ng-template #requiredFieldsTemplate>
+            @if (displayRequiredFields) {
+              <kc-required-fields-notice />
+            }
+          </ng-template>
+
+          <ng-template #usernameTemplate>
+            @if (kcContext.auth?.showUsername && !kcContext?.auth?.showResetCredentials) {
+              <kc-username-block />
+            }
+          </ng-template>
+
+          <!-- Username Block: Use ng-template refs instead of component directly -->
+          <kc-username-required-fields-wrapper
+            [requiredFieldsTemplate]="requiredFieldsTemplate"
+            [usernameTemplate]="usernameTemplate"
+          />
+
+          <!-- Content -->
+          <ng-template #pageRef></ng-template>
+
+          <kc-try-another-way-link />
+
+          <div [kcClass]="'kcLoginMainFooter'">
+            @let socialProviders = socialProvidersNode && socialProvidersNode();
+            @if (socialProviders) {
+              <ng-container [ngTemplateOutlet]="socialProviders" />
+            }
+
+            @if (displayInfo) {
+              <div
+                id="kc-info"
+                [kcClass]="['kcLoginMainFooterBand', 'kcFormClass']"
+              >
+                <div
+                  id="kc-info-wrapper"
+                  [kcClass]="'kcLoginMainFooterBandItem'"
+                >
+                  @let info = infoNode && infoNode();
+                  @if (info) {
+                    <ng-container [ngTemplateOutlet]="info" />
+                  }
+                </div>
+              </div>
+            }
+          </div>
+        </div>
+
+        <div [kcClass]="'kcLoginMainFooter'">
+          <kc-footer> </kc-footer>
+        </div>
+      </main>
+    </div>
+  </div>
+}
