@@ -9136,7 +9136,7 @@ onetime@^7.0.0:
   dependencies:
     mimic-function "^5.0.0"
 
-open@10.2.0, open@^10.0.3:
+open@10.2.0, open@^10.0.3, open@^10.2.0:
   version "10.2.0"
   resolved "https://registry.yarnpkg.com/open/-/open-10.2.0.tgz#b9d855be007620e80b6fb05fac98141fe62db73c"
   integrity sha512-YgBpdJHPyQ2UE5x+hlSXcnejzAvD0b22U2OuAP+8OnlJT+PjWPxtgmGqKKc+RgTM63U9gN0YzrYc71R2WT/hTA==
@@ -10994,10 +10994,10 @@ stdin-discarder@^0.2.2:
   resolved "https://registry.yarnpkg.com/stdin-discarder/-/stdin-discarder-0.2.2.tgz#390037f44c4ae1a1ae535c5fe38dc3aba8d997be"
   integrity sha512-UhDfHmA92YAlNnCfhmq0VeNL5bDbiZGg7sZ2IvPsXubGkiNa9EC+tUTsjBRsYUAz87btI6/1wf4XoVvQ3uRnmQ==
 
-storybook@^10.0.7:
-  version "10.1.2"
-  resolved "https://registry.yarnpkg.com/storybook/-/storybook-10.1.2.tgz#cb596d76ef04d248509f6fc16966f8fc6326f50c"
-  integrity sha512-yFL15WVQJeagmptyRadd2cwJlMVCo6xPoTPt/R+lQXIJmsTDHOFl5cZooIsvgALe3hTi5hsuVL3pG2bPEUuYGg==
+storybook@^10.1.10:
+  version "10.1.10"
+  resolved "https://registry.yarnpkg.com/storybook/-/storybook-10.1.10.tgz#9023e063f97cb2c38b4520e03d49336bcbf6661f"
+  integrity sha512-oK0t0jEogiKKfv5Z1ao4Of99+xWw1TMUGuGRYDQS4kp2yyBsJQEgu7NI7OLYsCDI6gzt5p3RPtl1lqdeVLUi8A==
   dependencies:
     "@storybook/global" "^5.0.0"
     "@storybook/icons" "^2.0.0"
@@ -11006,6 +11006,7 @@ storybook@^10.0.7:
     "@vitest/expect" "3.2.4"
     "@vitest/spy" "3.2.4"
     esbuild "^0.18.0 || ^0.19.0 || ^0.20.0 || ^0.21.0 || ^0.22.0 || ^0.23.0 || ^0.24.0 || ^0.25.0 || ^0.26.0 || ^0.27.0"
+    open "^10.2.0"
     recast "^0.23.5"
     semver "^7.6.2"
     use-sync-external-store "^1.5.0"
