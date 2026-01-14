@@ -1,0 +1,14 @@
+<kc-email
+  preview="Here is a preview"
+  [locale]="$locale()"
+>
+  <ng-email-container>
+    <ng-email-img
+      [src]="baseUrl + '/kc-logo.png'"
+      alt="KC Logo"
+      width="83"
+      height="75"
+    ></ng-email-img>
+  </ng-email-container>
+  <ng-email-text>This is a test message from {{ exp('realmName') }}</ng-email-text>
+</kc-email>
