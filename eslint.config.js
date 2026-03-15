@@ -8,6 +8,9 @@ import tseslint from 'typescript-eslint';
 
 export default defineConfig(
   {
+    ignores: ['**/node_modules', '**/dist'],
+  },
+  {
     files: ['*.stories.@(ts|tsx|js|jsx|mjs|cjs)', '*.story.@(ts|tsx|js|jsx|mjs|cjs)'],
     extends: [
       eslint.configs.recommended,
@@ -33,7 +36,7 @@ export default defineConfig(
     },
   },
   {
-    files: ['**/*.ts'],
+    files: ['**/*.ts', '**/*.js', '**/*.mjs', '**/*.cjs'],
     plugins: {
       prettier,
       '@typescript-eslint': tseslint.plugin,
@@ -90,5 +93,10 @@ export default defineConfig(
       '@angular-eslint/template/no-autofocus': 'off',
       'prettier/prettier': ['error', { parser: 'angular' }],
     },
+  },
+  {
+    // disable type-aware linting on JS files
+    files: ['**/*.js', '**/*.mjs', '**/*.cjs'],
+    extends: [tseslint.configs.disableTypeChecked],
   },
 );
