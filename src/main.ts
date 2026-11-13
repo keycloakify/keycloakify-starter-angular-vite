@@ -2,7 +2,7 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app.config';
 import { bootstrapKcApplication } from './kc.gen';
 
-// The following block can be uncommented to test a specific page with `yarn dev`
+// The following block can be uncommented to test a specific page with `pnpm start`
 // Don't forget to comment back or your bundle size will increase
 /*
 import { getKcContextMock } from './login/KcPageStory';

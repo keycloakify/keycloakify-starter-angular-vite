@@ -11,7 +11,7 @@ This starter is based on Vite and Angular. There is also [a native esbuild Angul
 ```bash
 git clone https://github.com/keycloakify/keycloakify-starter-angular-vite
 cd keycloakify-starter-angular-vite
-yarn install # Or use an other package manager, just be sure to delete the yarn.lock if you use another package manager.
+pnpm install # Or use another package manager, just be sure to delete the pnpm-lock.yaml if you use another package manager.
 ```
 
 # Testing the theme locally

@@ -1,0 +1,15 @@
+overrides:
+  esbuild: ^0.28.0
+  vite: ^8.3.8
+
+allowBuilds:
+  '@parcel/watcher': false
+  esbuild: true
+  less: false
+  lmdb: false
+  msgpackr-extract: false
+  nx: false
+
+minimumReleaseAgeExclude:
+  - '@keycloakify/angular@22.1.1'
+  - jsdom@31.0.1
