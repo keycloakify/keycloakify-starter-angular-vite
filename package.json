@@ -64,7 +64,7 @@
     "jsdom": "^31.0.1",
     "npm-check-updates": "^23.1.1",
     "prettier": "^3.10.1",
-    "storybook": "^10.6.7",
+    "storybook": "^10.6.8",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.72.2",
     "vite": "^8.3.8",
